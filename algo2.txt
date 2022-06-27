@@ -1,0 +1,29 @@
+ALGORITHM sum
+VAR
+set1: ARRAY_OF INTEGER[4]
+set2 : ARRAY_OF INTEGER[4]
+sum : INTEGER := 0;
+BEGIN
+arr1 := {3, 10, 7, 2, 5};
+arr2 := {1, 0, 1, 8 ,3};
+FOR i FROM 0 TO arr1.length STEP step  DO
+FOR j FROM 0 TO arr2.length STEP step  DO
+IF ( arr1[i] = arr2[j] ) THEN
+break;
+ELSE 
+sum := sum + arr1[j]
+END_IF
+END_FOR
+END_FOR
+FOR i FROM 0 TO length(arr2) STEP step  DO
+FOR j FROM 0 TO length(arr1) STEP step  DO
+IF ( arr2[i] = arr1[j] ) THEN
+break;
+ELSE 
+sum := sum + arr2[j]
+END_IF
+END_FOR
+END_FOR
+
+
+END
